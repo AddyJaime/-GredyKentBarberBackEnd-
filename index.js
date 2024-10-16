@@ -19,6 +19,8 @@ connectDB();
 const app = express();
 
 const allowedOrigins = [
+  "https://gredykentbarbershop.com",
+  "https://gredykent-barber-frontend.vercel.app",
   "https://gredykent-barber-frontend-egwfrmxml-addy-jaimes-projects.vercel.app",
 ];
 
