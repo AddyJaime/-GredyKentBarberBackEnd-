@@ -15,15 +15,14 @@ dotenv.config();
 // connect database
 connectDB();
 
-// Config express
-const app = express();
-
 const allowedOrigins = [
   "https://gredykentbarbershop.com",
   "https://gredykent-barber-frontend.vercel.app",
   "https://gredykent-barber-frontend-egwfrmxml-addy-jaimes-projects.vercel.app",
 ];
 
+// Config express
+const app = express();
 // cors acceptoing req from front end
 app.use(
   cors({
