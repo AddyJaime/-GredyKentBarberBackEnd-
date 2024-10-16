@@ -18,8 +18,22 @@ connectDB();
 // Config express
 const app = express();
 
+const allowedOrigins = [
+  "https://gredykent-barber-frontend-egwfrmxml-addy-jaimes-projects.vercel.app",
+];
+
 // cors acceptoing req from front end
-app.use(cors({ origin: "*" }));
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+  })
+);
 
 // middleware for accepting json
 app.use(express.json());
