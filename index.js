@@ -16,7 +16,7 @@ dotenv.config();
 connectDB();
 
 const allowedOrigins = [
-  "https://gredykent-barber-frontend-k9nqg5tix-addy-jaimes-projects.vercel.app",
+  "https://gredykent-barber-frontend-d3ku-lzqtd9fps-addy-jaimes-projects.vercel.app",
 ];
 
 // Config express
