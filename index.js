@@ -22,18 +22,19 @@ const allowedOrigins = ["https://gredykent-barber-frontend-d3ku.vercel.app"];
 
 // Config express
 const app = express();
+app.use(cors());
 // cors acceptoing req from front end
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-  })
-);
+// app.use(
+//   cors({
+//     origin: function (origin, callback) {
+//       if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error("Not allowed by CORS"));
+//       }
+//     },
+//   })
+// );
 
 // middleware for accepting json
 app.use(express.json());

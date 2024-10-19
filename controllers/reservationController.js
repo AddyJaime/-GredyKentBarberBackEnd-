@@ -1,5 +1,3 @@
-import express from "express";
-
 // in controllers we import the model, and here we write down the logic for creating a new appoinemt
 import Reservation from "../models/reservationSchema.js";
 
