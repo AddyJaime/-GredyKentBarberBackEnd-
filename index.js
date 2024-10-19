@@ -39,6 +39,12 @@ app.use(cors());
 // middleware for accepting json
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Welcome",
+  });
+});
+
 app.get("/api/reservations", getAllReservation);
 app.post("/api/reservations", createRervation);
 
