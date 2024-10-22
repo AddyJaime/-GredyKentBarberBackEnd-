@@ -6,6 +6,7 @@ const reservationSchema = new mongoose.Schema({
   date: { type: Date, required: true },
   time: { type: String, required: true },
   note: { type: String, required: true },
+  number: { type: Number, required: true },
   status: { type: String, default: "Pending" },
 });
 

@@ -12,13 +12,14 @@ export const getAllReservation = async (req, res) => {
 
 export const createRervation = async (req, res) => {
   try {
-    const { name, service, date, time, note, status } = req.body;
+    const { name, service, number, date, time, note, status } = req.body;
     const newReservation = new Reservation({
       name,
       service,
       date,
       time,
       note,
+      number,
       status,
     });
     await newReservation.save();
